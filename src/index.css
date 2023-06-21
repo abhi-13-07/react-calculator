@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+	--btn-height: 60px;
+	--btn-width: 80px;
+	--default-color: gray;
+	--btn-default-color: #f9f9f9;
+	--btn-default-hover: #eeeded;
+	--btn-primary-color: #0067c0;
+	--btn-primary-hover: rgb(61, 125, 243);
+	--btn-white-color: #ffffff;
+	--btn-white-hover: rgb(255, 247, 253);
+	--calculator-background-color: #f3f3f3;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: rgb(121, 118, 118);
+	overflow: hidden;
+}
+
+.calculator {
+	background-color: var(--calculator-background-color);
+	padding: 8px;
+	border-radius: 5px;
+}
+
+.btn {
+	border: none;
+	height: var(--btn-height);
+	width: var(--btn-width);
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.btn-default {
+	background-color: var(--btn-default-color);
+}
+
+.btn-default:hover {
+	background-color: var(--btn-default-hover);
+}
+
+.btn-primary {
+	background-color: var(--btn-primary-color);
+	color: white;
+	transition: 0.2s;
+}
+
+.btn-primary:hover {
+	background-color: var(--btn-primary-hover);
+}
+
+.btn-white {
+	background-color: white;
+	transition: 0.2s;
+}
+
+.btn-white:hover {
+	background-color: var(--btn-white-hover);
+}
+
+.btn-container {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(4, var(--btn-width));
+	gap: 4px;
+}
+
+.rotate-45 {
+	transform: rotate(45deg);
+}
+
+.operator {
+	font-size: 24px;
+}
+
+.display {
+	min-height: 100px;
+	padding: 10px;
+	text-align: right;
+}
+
+.sub-display {
+	padding: 5px;
+	min-height: 35px;
+	font-size: 16px;
+	color: var(--default-color);
+}
+
+.main-display {
+	font-size: 45px;
+	padding: 5px;
+	min-height: 80px;
+}
